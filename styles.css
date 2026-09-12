@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: #1e1e2f;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.burger span {
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.25s ease;
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== Nav links (mobile: slide-in sidebar) ===== */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e2f;
+    list-style: none;
+    margin: 0;
+    padding: 5rem 1.5rem;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 150;
+}
+
+.nav-links.open {
+    transform: translateX(0);
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links li {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 769px) {
+    .burger {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        gap: 1.5rem;
+        transform: none;
+        transition: none;
+    }
+
+    .nav-links li {
+        width: auto;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .nav-links a:hover {
+            border-bottom-color: #fff;
+        }
+    }
+}
