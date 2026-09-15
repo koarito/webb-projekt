@@ -1,34 +1,96 @@
+:root {
+    --surface: #312e5c;
+    --surface-nav: #211f42;
+    --border-strong: rgba(255, 255, 255, 0.35);
+    --border-soft: rgba(255, 255, 255, 0.18);
+}
+
+/* ===== Reset & sticky footer setup ===== */
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+site-nav, site-banner, site-footer, main {
+    display: block;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* ===== Content card ===== */
+.header-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.header-card .card-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+}
+
+.header-card .card-description {
+    font-size: 1rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* ===== Navbar (mobile first) ===== */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
-    background: #1e1e2f;
+    padding: 0.6rem 1.25rem;
+    background: var(--surface-nav);
     color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid var(--border-strong);
     position: relative;
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+}
+.logo a:hover {
+    color: inherit;
 }
 
 .burger {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 26px;
-    height: 18px;
+    width: 24px;
+    height: 16px;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 200;
+    z-index: 300;
 }
 
 .burger span {
@@ -39,7 +101,7 @@ body {
 }
 
 .burger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .burger.active span:nth-child(2) {
@@ -47,10 +109,10 @@ body {
 }
 
 .burger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===== Nav links (mobile: slide-in sidebar) ===== */
+/* Nav links: mobile = slide-in sidebar */
 .nav-links {
     position: fixed;
     top: 0;
@@ -59,11 +121,11 @@ body {
     width: 220px;
     display: flex;
     flex-direction: column;
-    background: #1e1e2f;
+    background: var(--surface-nav);
     list-style: none;
     margin: 0;
-    padding: 5rem 1.5rem;
-    gap: 2rem;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 150;
@@ -80,11 +142,102 @@ body {
 
 .nav-links li {
     width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-soft);
 }
 
+/* ===== Banner (mobile first, title only) ===== */
+.banner {
+    background: var(--surface);
+    color: #fff;
+    padding: 0.9rem 1.25rem;
+    text-align: center;
+    border-bottom: 2px solid var(--border-strong);
+}
+
+.banner-title {
+    font-size: 1.15rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ===== Footer (mobile first: compact) ===== */
+.site-footer {
+    background: var(--surface);
+    color: #fff;
+    padding: 0.85rem 1.25rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-top: 2px solid var(--border-strong);
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-heading {
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    font-size: 0.85rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin: 0.4rem 0 0;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 0.5rem;
+}
+
+/* ===== Small tablet and up: footer becomes a row ===== */
+@media (min-width: 600px) {
+    .site-footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .footer-col {
+        min-width: 160px;
+    }
+
+    .footer-col ul {
+        flex-direction: column;
+    }
+}
+
+/* ===== Desktop and up: nav row + bigger banner ===== */
 @media (min-width: 769px) {
+    .navbar {
+        padding: 0.75rem 1.5rem;
+    }
+
     .burger {
         display: none;
     }
@@ -111,6 +264,18 @@ body {
         padding-bottom: 4px;
         border-bottom: 2px solid transparent;
         transition: border-color 0.2s ease;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .banner {
+        padding: 1.1rem 1.5rem;
+    }
+
+    .banner-title {
+        font-size: 1.4rem;
     }
 
     @media (hover: hover) and (pointer: fine) {
