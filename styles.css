@@ -55,6 +55,17 @@ main {
     text-align: left;
 }
 
+/* ===== Footnote ===== */
+.footnote-ref {
+    font-size: 0.75em;
+    vertical-align: super;
+    color: #1e1e2f;
+    text-decoration: none;
+}
+.footnote-ref:hover {
+    text-decoration: underline;
+}
+
 /* ===== Navbar (mobile first) ===== */
 .navbar {
     display: flex;
