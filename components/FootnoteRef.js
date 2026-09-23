@@ -4,7 +4,7 @@ class FootnoteRef extends HTMLElement {
     }
 
     footnoteHtml = () => `
-        <a class="footnote-ref" href="reference.html#${this.getAttribute('ref')}">[${this.getAttribute('num')}]</a>
+        <a class="footnote-ref" href="references.html#${this.getAttribute('ref')}">[${this.getAttribute('num')}]</a>
     `;
 }
 customElements.define('footnote-ref', FootnoteRef);
