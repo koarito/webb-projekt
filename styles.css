@@ -55,6 +55,20 @@ main {
     text-align: left;
 }
 
+/* References */
+.references li {
+    padding: 0.4em 0.6em;
+    border-radius: 4px;
+    scroll-margin-top: 2rem; /* keeps it clear of a fixed banner */
+}
+
+.references li:focus,
+.references li:target {
+    outline: 3px solid #1e1e2f;
+    outline-offset: 3px;
+    background-color: #eef0fa;
+}
+
 /* ===== Footnote ===== */
 .footnote-ref {
     font-size: 0.75em;
