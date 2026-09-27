@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Gemensamma webkomponenter: navigation och sidbanner -->
     <site-nav></site-nav>
     <site-banner title="Hypotes - översvämningar"></site-banner>
+
     <main>
       <div class="header-card">
         <h1 class="card-heading">Hypotes</h1>
+
+        <!-- Sidans huvudinnehåll: gruppens hypotes om AI och flera datakällor -->
         <div class="card-description">
           <p>
             Vår hypotes är att en kombination av flera datakällor, såsom
@@ -35,7 +39,11 @@
         </div>
       </div>
     </main>
+
+    <!-- Gemensam footer med sidkarta och källhänvisning -->
     <site-footer></site-footer>
+
+    <!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

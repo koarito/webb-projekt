@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Gemensamma webkomponenter: navigation och sidbanner -->
     <site-nav></site-nav>
     <site-banner title="Idéabstract - översvämningar"></site-banner>
+
     <main>
       <div class="header-card">
         <h1 class="card-heading">
           Kan vi förutsäga översvämningar innan de inträffar?
         </h1>
+
+        <!-- Startsidans idéabstract: sammanfattar ämne, utmaning, idé och hypotes
+         med semantiska länkar vidare till respektive undersida -->
         <p class="card-description">
           <a href="subject-area.html">Översvämningar</a> är en återkommande
           naturkatastrof som kan orsaka stora skador på människor, samhällen och
@@ -28,7 +33,11 @@
         </p>
       </div>
     </main>
+
+    <!-- Gemensam footer med sidkarta och källhänvisning -->
     <site-footer></site-footer>
+
+    <!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
     <script type="module" src="main.js"></script>
   </body>
 </html>

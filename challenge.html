@@ -9,34 +9,42 @@
 </head>
 
 <body>
-    <site-nav></site-nav>
-    <site-banner title="Utmaning - översvämningar"></site-banner>
-    <main>
-        <div class="header-card">
-            <h1 class="card-heading">Utmaningar med att upptäcka översvämningar i tid</h1>
-            <div class="card-description">
-                <p>Att förutse översvämningar innan de inträffar är en av de största utmaningarna inom
-                    katastrofhantering. Trots moderna väderprognoser och avancerade övervakningssystem kan det vara
-                    svårt att exakt avgöra när och var översvämning kommer att ske. Myndigheter använder information
-                    från väderstationer, vattennivåmätare och satelliter för att identifiera riskområden och varna
-                    befolkningen i god tid.<footnote-ref num="3" ref="source-3"></footnote-ref>
-                </p>
-                <p>En annan utmaning är att säkerställa att varningar når alla människor snabbt och tydligt. Om invånare
-                    får information i tid kan de förbereda sig genom att skydda sina hem, samla viktiga tillhörigheter
-                    och vid behov evakuera till säkra områden. Tidiga varningssystem spelar därför en viktig roll för
-                    att minska både mänskliga och ekonomiska förluster.<footnote-ref num="4" ref="source-4"></footnote-ref></p>
-                </p>
-                <p>
-                    Samtidigt räcker inte tekniken ensam. För att samhället ska kunna agera effektivt krävs också
-                    kunskap, beredskap och tydlig kommunikation mellan myndigheter och invånare. Genom att kombinera
-                    modern teknik med välplanerade säkerhetsåtgärder kan konsekvenserna av framtida översvämningar
-                    minskas.<footnote-ref num="5" ref="source-5"></footnote-ref></p>
-                </p>
-            </div>
+<!-- Gemensamma webkomponenter: navigation och sidbanner -->
+<site-nav></site-nav>
+<site-banner title="Utmaning - översvämningar"></site-banner>
+
+<main>
+    <div class="header-card">
+        <h1 class="card-heading">Utmaningar med att upptäcka översvämningar i tid</h1>
+
+        <!-- Sidans huvudinnehåll om utmaningen, med fotnotsreferenser till references.html -->
+        <div class="card-description">
+            <p>Att förutse översvämningar innan de inträffar är en av de största utmaningarna inom
+                katastrofhantering. Trots moderna väderprognoser och avancerade övervakningssystem kan det vara
+                svårt att exakt avgöra när och var översvämning kommer att ske. Myndigheter använder information
+                från väderstationer, vattennivåmätare och satelliter för att identifiera riskområden och varna
+                befolkningen i god tid.<footnote-ref num="3" ref="source-3"></footnote-ref>
+            </p>
+            <p>En annan utmaning är att säkerställa att varningar når alla människor snabbt och tydligt. Om invånare
+                får information i tid kan de förbereda sig genom att skydda sina hem, samla viktiga tillhörigheter
+                och vid behov evakuera till säkra områden. Tidiga varningssystem spelar därför en viktig roll för
+                att minska både mänskliga och ekonomiska förluster.<footnote-ref num="4" ref="source-4"></footnote-ref></p>
+            </p>
+            <p>
+                Samtidigt räcker inte tekniken ensam. För att samhället ska kunna agera effektivt krävs också
+                kunskap, beredskap och tydlig kommunikation mellan myndigheter och invånare. Genom att kombinera
+                modern teknik med välplanerade säkerhetsåtgärder kan konsekvenserna av framtida översvämningar
+                minskas.<footnote-ref num="5" ref="source-5"></footnote-ref></p>
+            </p>
         </div>
-    </main>
-    <site-footer></site-footer>
-    <script type="module" src="main.js"></script>
+    </div>
+</main>
+
+<!-- Gemensam footer med sidkarta och källhänvisning -->
+<site-footer></site-footer>
+
+<!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
+<script type="module" src="main.js"></script>
 </body>
 
 </html>
