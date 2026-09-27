@@ -1,22 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebbProjekt21</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<site-nav></site-nav>
-<site-banner title="Ämnesområde - översvämningar"></site-banner>
-<main>
-    <div class="header-card">
-        <h1 class="card-heading"></h1>
-        <p class="card-description">
-        </p>
-    </div>
-</main>
-<site-footer></site-footer>
-<script type="module" src="main.js"></script>
-</body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Gemensamma webkomponenter: navigation och sidbanner -->
+    <site-nav></site-nav>
+    <site-banner title="Ämnesområde - översvämningar"></site-banner>
+
+    <main>
+      <div class="header-card">
+        <h1 class="card-heading">Ämnesområden</h1>
+
+        <!-- Sidans huvudinnehåll: bakgrund om översvämningar och deras konsekvenser -->
+        <div class="card-description">
+          <p>
+            En översvämning är en av världens vanligaste naturkatastrofer. Det
+            kan orsakas bland annat vid kraftig nederbörd under en kort period,
+            när en stor mängd snö har smält, när vattennivån i sjöar och
+            vattendrag stiger eller att havet svämmar in i land på grund av
+            kraftiga vindar och lufttryck.
+          </p>
+          <p>
+            Enligt SMHI är översvämningar ett av de dödligaste
+            naturkatastroferna och även påverkar vissa länder ekonomiskt.
+            Konsekvenserna för översvämning är betydelsefulla eftersom det kan
+            vara orsaken till skador på bland annat människor, byggnader. När
+            det sker översvämningar på vägarna berör det trafiken, När
+            översvämningarna forsar fram in i byggnader så kommer det med
+            negativ ekonomisk påverkan. Så i stort sett påverkar översvämningar
+            hela samhället.<footnote-ref num="6" ref="source-6"></footnote-ref>
+          </p>
+          <p>
+            Det är väldigt viktigt att kunna förutsäga översvämningar i god tid
+            innan det sker för att kunna vidta förebyggande åtgärder. Genom att
+            agera på tidiga varningssignaler kan man skydda människor och
+            byggnader.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Gemensam footer med sidkarta och källhänvisning -->
+    <site-footer></site-footer>
+
+    <!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

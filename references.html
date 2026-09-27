@@ -1,40 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebbProjekt21</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Gemensamma webkomponenter: navigation och sidbanner -->
     <site-nav></site-nav>
     <site-banner title="Referenser"></site-banner>
     <main>
-        <ol class="references">
-            <li id="source-1">SMHI, 2026.<a href="https://www.smhi.se/forskning/amnen/prognoser-och-varningar"
-                    target="_blank" rel="noopener noreferrer">Prognoser och varningar</a>
-                https://www.smhi.se/forskning/amnen/prognoser-och-varningar</li>
-            <li id="source-2">WMO, 2026. <a href="https://wmo.int/themes/artificial-intelligence" target="_blank"
-                    rel="noopener noreferrer">Artificial Intelligence</a>
-                https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning</li>
-            <li id="source-3">WMO, 2026. <a
-                    href="https://wmo.int/activities/projects/project-portfolio/early-warning-systems-floods-ews-f"
-                    target="_blank" rel="noopener noreferrer">Early Warning Systems for Floods</a>
-                https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning</li>
-            <li id="source-4">UNDRR, 2026. <a href="https://www.undrr.org/terminology/early-warning-system"
-                    target="_blank" rel="noopener noreferrer">Definition: Early Warning System</a>
-                https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning</li>
-            <li id="source-5">UNDRR, 2026. <a
-                    href="https://www.undrr.org/implementing-sendai-framework/sendai-framework-action/early-warnings-f"
-                    target="_blank" rel="noopener noreferrer">Early Warnings for All</a>
-                https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning</li>
-        </ol>
-
+      <!-- Källförteckning i Nature-format, id:n matchar num/ref-attributen på <footnote-ref> -->
+      <ol class="references">
+        <li id="source-1">
+          SMHI. Prognoser och varningar.
+          <a
+            href="https://www.smhi.se/forskning/amnen/prognoser-och-varningar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://www.smhi.se/forskning/amnen/prognoser-och-varningar
+          </a>
+          . Hämtad 22 september 2026
+        </li>
+        <li id="source-2">
+          WMO. Artificial Intelligence.
+          <a
+            href="https://wmo.int/themes/artificial-intelligence"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning
+          </a>
+          . Hämtad 22 september 2026
+        </li>
+        <li id="source-3">
+          WMO. Early Warning Systems for Floods.
+          <a
+            href="https://wmo.int/activities/projects/project-portfolio/early-warning-systems-floods-ews-f"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://public.wmo.int/en/resources/bulletin/artificial-intelligence-and-machine-learning
+          </a>
+          . Hämtad 22 september 2026
+        </li>
+        <li id="source-4">
+          UNDRR. Definition: Early Warning System.
+          <a
+            href="https://www.undrr.org/terminology/early-warning-system"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://www.undrr.org/terminology/early-warning-system
+          </a>
+          . Hämtad 22 september 2026
+        </li>
+        <li id="source-5">
+          UNDRR. Early Warnings for All.
+          <a
+            href="https://www.undrr.org/implementing-sendai-framework/sendai-framework-action/early-warnings-for-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://www.undrr.org/implementing-sendai-framework/sendai-framework-action/early-warnings-for-all
+          </a>
+          . Hämtad 22 september 2026
+        </li>
+        <li id="source-6">
+          UNDRR. Översvämningar.
+          <a
+            href="https://www.smhi.se/kunskapsbanken/hydrologi/oversvamningar"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.smhi.se/kunskapsbanken/hydrologi/oversvamningar</a
+          >
+          . Hämtad 22 september 2026
+        </li>
+      </ol>
     </main>
-    <site-footer></site-footer>
-    <script type="module" src="main.js"></script>
-</body>
 
+    <!-- Gemensam footer med sidkarta och källhänvisning -->
+    <site-footer></site-footer>
+
+    <!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

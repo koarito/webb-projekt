@@ -1,10 +1,16 @@
+// Custom element för en enskild fotnotsreferens i löptexten
 class FootnoteRef extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = this.footnoteHtml();
-    }
+  // Körs när elementet läggs till i DOM:en
+  connectedCallback() {
+    this.innerHTML = this.footnoteHtml();
+  }
 
-    footnoteHtml = () => `
-        <a class="footnote-ref" href="references.html#${this.getAttribute('ref')}">[${this.getAttribute('num')}]</a>
+  // Renderar en länk till references.html, till rätt ankare via "ref"-attributet,
+  // med "num"-attributet som synligt fotnotsnummer, t.ex. [1]
+  footnoteHtml = () => `
+        <a class="footnote-ref" href="references.html#${this.getAttribute("ref")}">[${this.getAttribute("num")}]</a>
     `;
 }
-customElements.define('footnote-ref', FootnoteRef);
+
+// Registrerar komponenten så att <footnote-ref> kan användas i HTML
+customElements.define("footnote-ref", FootnoteRef);

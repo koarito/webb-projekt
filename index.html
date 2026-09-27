@@ -1,36 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebbProjekt21</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<site-nav></site-nav>
-<site-banner title="Idéabstract - översvämningar"></site-banner>
-<main>
-    <div class="header-card">
-        <h1 class="card-heading">Kan vi förutsäga översvämningar innan de inträffar?</h1>
-        <p class="card-description">
-            <a href="subject-area.html">Översvämningar</a> är en återkommande naturkatastrof som kan orsaka stora skador
-            på människor, samhällen och
-            miljö.
-            En central <a href="challenge.html">utmaning</a> är att kunna upptäcka översvämningsrisken tillräckligt
-            tidigt för att ge människor
-            möjlighet
-            att agera. Vår <a href="idea.html">idé</a> är att undersöka om realtidsdata om exempelvis vattennivå,
-            nederbörd och markfuktighet
-            kan
-            kombineras för att identifiera ökande översvämningsrisker. Vi utgår från
-            <a href="hypothesis.html">hypotesen</a> att en kombination av
-            flera
-            datakällor kan göra det möjligt att förutsäga översvämningar tidigare och mer träffsäkert.
-        </p>
-    </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Gemensamma webkomponenter: navigation och sidbanner -->
+    <site-nav></site-nav>
+    <site-banner title="Idéabstract - översvämningar"></site-banner>
 
-</main>
-<site-footer></site-footer>
-<script type="module" src="main.js"></script>
-</body>
+    <main>
+      <div class="header-card">
+        <h1 class="card-heading">
+          Kan vi förutsäga översvämningar innan de inträffar?
+        </h1>
+
+        <!-- Startsidans idéabstract: sammanfattar ämne, utmaning, idé och hypotes
+         med semantiska länkar vidare till respektive undersida -->
+        <p class="card-description">
+          <a href="subject-area.html">Översvämningar</a> är en återkommande
+          naturkatastrof som kan orsaka stora skador på människor, samhällen och
+          miljö. En central <a href="challenge.html">utmaning</a> är att kunna
+          upptäcka översvämningsrisken tillräckligt tidigt för att ge människor
+          möjlighet att agera. Vår <a href="idea.html">idé</a> är att undersöka
+          om realtidsdata om exempelvis vattennivå, nederbörd och markfuktighet
+          kan kombineras för att med hjälp av AI identifiera ökande översvämningsrisker. Vi
+          utgår från <a href="hypothesis.html">hypotesen</a> att en kombination
+          av flera datakällor kan göra det möjligt att förutsäga översvämningar
+          tidigare och mer träffsäkert.
+        </p>
+      </div>
+    </main>
+
+    <!-- Gemensam footer med sidkarta och källhänvisning -->
+    <site-footer></site-footer>
+
+    <!-- main.js registrerar webkomponenterna (site-nav, site-banner, site-footer, footnote-ref) -->
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
