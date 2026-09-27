@@ -1,13 +1,13 @@
 class Navigation extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = this.navbarHtml()
-        document.querySelector('.burger').addEventListener('click', function () {
-            this.classList.toggle('active');
-            document.querySelector('.nav-links').classList.toggle('open');
-        });
-    }
+  connectedCallback() {
+    this.innerHTML = this.navbarHtml();
+    document.querySelector(".burger").addEventListener("click", function () {
+      this.classList.toggle("active");
+      document.querySelector(".nav-links").classList.toggle("open");
+    });
+  }
 
-    navbarHtml = () => `
+  navbarHtml = () => `
        <nav class="navbar">
       <a class="logo" href="../index.html">Grupp 21</a>
       <button class="burger" aria-label="Toggle menu">
@@ -25,4 +25,4 @@ class Navigation extends HTMLElement {
     `;
 }
 
-customElements.define('site-nav', Navigation);
+customElements.define("site-nav", Navigation);

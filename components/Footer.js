@@ -1,9 +1,9 @@
 class SiteFooter extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = this.footerHtml();
-    }
+  connectedCallback() {
+    this.innerHTML = this.footerHtml();
+  }
 
-    footerHtml = () => `
+  footerHtml = () => `
         <footer class="site-footer">
             <div class="footer-col">
                 <p class="footer-heading">Grupp 21</p>
@@ -26,4 +26,4 @@ class SiteFooter extends HTMLElement {
         </footer>
     `;
 }
-customElements.define('site-footer', SiteFooter);
+customElements.define("site-footer", SiteFooter);
